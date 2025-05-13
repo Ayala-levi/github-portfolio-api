@@ -38,8 +38,8 @@
 
 1.  **שכפל את ה-repository:**
     ```bash
-    git clone [כתובת ה-repository שלך כאן]
-    cd [שם התיקייה של הפרויקט]
+    git clone https://github.com/Ayala-levi/github-portfolio-api.git
+    cd github-portfolio-api
     ```
 
 2.  **צור קובץ `secrets.json`:**
