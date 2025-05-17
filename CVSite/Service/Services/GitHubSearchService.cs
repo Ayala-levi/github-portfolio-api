@@ -31,7 +31,9 @@ namespace YourNamespace.Services
                 {
                     Name = repo.FullName,
                     HtmlUrl = repo.HtmlUrl,
-                    StarCount = repo.StargazersCount
+                    StarCount = repo.StargazersCount,
+                    LastCommitDate=repo.PushedAt
+
                 }).ToList();
             }
             catch (RateLimitExceededException)

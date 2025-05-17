@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BckriJg0kvJyqEaEpz+ztoI376b+N2BlT/nKGsZZgfbk+v8pYBRJjxsCcqG+OZ6hdCHNfCMcdjUco5ExW+cxAQ==",
+  "dgSpecHash": "XUHvvhMqCZ5tzWBewEM+We0nAMzSDX70Pin2qNY0x/izNjiWDV749Ur8SpCUO1cXWJr5SDZLRlJhucZSNJyByw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\משתמש\\Documents\\יד\\פרקטיקוד\\פרויקט מספר 5\\CVSite\\Service\\Service.csproj",
+  "projectFilePath": "C:\\Users\\משתמש\\Documents\\יד\\פרקטיקוד\\פרויקט מספר 5\\github-portfolio-api\\CVSite\\Service\\Service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\משתמש\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\משתמש\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\8.0.0\\microsoft.bcl.asyncinterfaces.8.0.0.nupkg.sha512",

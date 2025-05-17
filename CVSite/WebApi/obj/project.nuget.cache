@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fduVIO1s/PGl5cxjl1zzgVjCO3ickeFrQnVblCH2Thj/san+U73g4SlvyVpvKhv3qbQIIfkEE5KP8aG+uEkyug==",
+  "dgSpecHash": "xa608WjWa+IGSpMBwdv5K4LLTe+qmGDlmhUUCLtq7i5IMNPYhxPMjYoUP6wfuDAKZiaDDsF9VcpYgAdhJUCjMA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\משתמש\\Documents\\יד\\פרקטיקוד\\פרויקט מספר 5\\CVSite\\WebApi\\WebApi.csproj",
+  "projectFilePath": "C:\\Users\\משתמש\\Documents\\יד\\פרקטיקוד\\פרויקט מספר 5\\github-portfolio-api\\CVSite\\WebApi\\WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\משתמש\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\משתמש\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.10\\microsoft.aspnetcore.openapi.7.0.10.nupkg.sha512",

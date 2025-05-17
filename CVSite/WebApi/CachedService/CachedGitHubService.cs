@@ -16,21 +16,27 @@ namespace WebApi.CachedService
             _memoryCache = memoryCache;
             
         }
+       
         public async Task<List<RepositoryInfo>> GetUserRepositories()
         {
-            //מנסה לקבל נתונים מהמטמון. אם נמצא, מחזיר אותם
-            if (_memoryCache.TryGetValue(UserPortfolioKey, out List<RepositoryInfo> repositoryInfo))
+            // מנסה לקבל נתונים מהמטמון. אם נמצא, מחזיר אותם.
+            if (!_memoryCache.TryGetValue(UserPortfolioKey, out List<RepositoryInfo> repositoryInfo))
+            {
+                //  אם לא נמצא במטמון, מקבל את הנתונים משירות GitHub האמיתי.
+                repositoryInfo = await _gitHubService.GetUserRepositories();
+
+                //מגדיר אפשרויות מטמון
+                var cacheOption = new MemoryCacheEntryOptions()
+                    .SetAbsoluteExpiration(TimeSpan.FromSeconds(30))//הזמן שהנתונים ישארו ב cache
+                    .SetSlidingExpiration(TimeSpan.FromSeconds(10));//אם לא ביקשו תוך 10 שניות את הנתונים תנקה אותם
+
+                //  שומר את הנתונים שהתקבלו במטמון.
+                _memoryCache.Set(UserPortfolioKey, repositoryInfo, cacheOption);
+
+                //  מחזיר את הנתונים
                 return repositoryInfo;
+            }
 
-            //מגדיר אפשרויות מטמון
-            var cacheOption = new MemoryCacheEntryOptions()
-                .SetAbsoluteExpiration(TimeSpan.FromSeconds(30))//הזמן שהנתונים ישארו ב cache
-                .SetSlidingExpiration(TimeSpan.FromSeconds(10));//אם לא ביקשו תוך 10 שניות את הנתונים תנקה אותם
-
-            //השמה ל-catche
-            //מכניס למפתח את הערך ומשתמש בפונקציה שיצרנו cacheOption
-            _memoryCache.Set(UserPortfolioKey, repositoryInfo,cacheOption);
-            repositoryInfo = await _gitHubService.GetUserRepositories();
             return repositoryInfo;
         }
     }

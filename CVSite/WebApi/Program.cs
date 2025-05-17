@@ -19,7 +19,7 @@ builder.Services.Configure<GitHubIntegrationOptions>(builder.Configuration.GetSe
 //הוספת שירות הזיכרון מטמון
 builder.Services.AddMemoryCache();
 
-//builder.Services.Decorate<IGitHubService, CachedGitHubService>();//CachedGitHubService כולם יקבלו 
+builder.Services.Decorate<IGitHubService, CachedGitHubService>();//CachedGitHubService כולם יקבלו 
 
 var app = builder.Build();
 
